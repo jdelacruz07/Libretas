@@ -17,10 +17,12 @@ h2 {
 }
 
 .media-carta {
+    margin: 85%;
     margin: auto;
 }
 
 .bolsillo {
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -28,6 +30,14 @@ h2 {
 
 img {
     width: 350px;
+    height: 233px;
     flex: 0 1 auto;
     
+}
+
+@media (max-width: 576px) {
+    img { 
+        width: 100px;
+        height: 67px;
+    }
 }
