@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: 'Julius Sans One', sans-serif;}
+body {
+    max-width: 90%; 
+    margin: auto; 
+    font-family: 'Julius Sans One', sans-serif;}

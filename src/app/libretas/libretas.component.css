@@ -1,15 +1,33 @@
-
-.libretas h2{
+.container {
+    margin: auto;
     max-width: 85%;
+}
+.libretas {
+    margin: auto;
+}
+.libretas h2{
+    
     background: rgb(248, 197, 189);
     font-family: 'Julius Sans One', sans-serif;
 }
 
 h2 {
     text-align: center;
-    margin: 0;
+    border-radius: 15px;
+}
+
+.media-carta {
+    margin: auto;
+}
+
+.bolsillo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 img {
     width: 350px;
+    flex: 0 1 auto;
+    
 }
