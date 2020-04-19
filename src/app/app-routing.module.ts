@@ -5,13 +5,16 @@ import { LibretaBolsilloComponent } from './libreta-bolsillo/libreta-bolsillo.co
 import { LibretaMediaCartaComponent } from './libreta-media-carta/libreta-media-carta.component';
 
 const routes: Routes = [
-{ path: 'libretas', component: LibretasComponent}, 
-{ path: 'libreta-bolsillo', component: LibretaBolsilloComponent},
-{ path: 'libreta-media-carta', component: LibretaMediaCartaComponent},
-{ path: '',
-  redirectTo: 'libretas',
-  pathMatch: 'full'
-  }
+
+  { 
+    path: '',
+    redirectTo: 'libretas',
+    pathMatch: 'full'
+  },
+  { path: 'libretas', component: LibretasComponent}, 
+  { path: 'libreta-bolsillo', component: LibretaBolsilloComponent},
+  { path: 'libreta-media-carta', component: LibretaMediaCartaComponent},
+
 ];
 
 @NgModule({
