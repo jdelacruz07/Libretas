@@ -10,13 +10,11 @@ const routes: Routes = [
     path: '', component: LibretasComponent
   }, 
   { 
-    path: 'libreta-media-carta', component: LibretaMediaCartaComponent
-  },
-  { 
     path: 'libreta-bolsillo', component: LibretaBolsilloComponent
   },
-  
-
+  { 
+    path: 'libreta-media-carta', component: LibretaMediaCartaComponent
+  }
 ];
 
 @NgModule({
