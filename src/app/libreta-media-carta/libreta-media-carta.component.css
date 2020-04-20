@@ -2,10 +2,9 @@ img {
     width: 350px;
    }
    
-   .foto {
-       display: inline;
-   }
-
+.foto {
+    display: inline;
+}
 
 @media (max-width: 576px) {
     img { 
