@@ -10,10 +10,10 @@ const routes: Routes = [
     path: '', component: LibretasComponent
   }, 
   { 
-    path: 'yailin.heokuapp.com/libreta-bolsillo', component: LibretaBolsilloComponent
+    path: 'libreta-bolsillo', component: LibretaBolsilloComponent
   },
   { 
-    path: 'yailin.heokuapp.com/libreta-media-carta', component: LibretaMediaCartaComponent
+    path: 'libreta-media-carta', component: LibretaMediaCartaComponent
   }
 ];
 
