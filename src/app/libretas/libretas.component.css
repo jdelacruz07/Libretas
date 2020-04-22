@@ -3,8 +3,12 @@
     max-width: 85%;
 }
 
-h2 {
+h2{
     margin: 0;
+}
+
+h2:hover {
+    color: rgb(211, 122, 38);
 }
 
 img {
