@@ -11,9 +11,10 @@ export class LibretaBolsilloComponent implements OnInit {
     //"/assets/IMG_4299.JPG",
     //"/assets/IMG_4302.JPG",
     //"/assets/IMG_4317.JPG",
-    "/assets/IMG_4319.JPG",
-    "/assets/IMG_4326.JPG",
-    "/assets/IMG_4327.JPG",
+    {url: "/assets/IMG_4319.JPG", material: "piel"},
+    {url: "/assets/IMG_4326.JPG", material: "tela"},
+    {url: "/assets/IMG_4327.JPG", material: "papel"}
+  
     /*"/assets/IMG_4338.JPG",
     "/assets/IMG_4343.JPG",
     "/assets/IMG_4346.JPG",
