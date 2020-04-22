@@ -1,5 +1,11 @@
+<div class="container">
 
+    <h1>Libretas de media carta</h1>
+    <div class="flex">
+        <figure  class="foto" *ngFor="let foto of fotos; index as i">
+            <img src={{foto.url}} alt="no toy ????">
+            <figcaption> {{foto.material}}</figcaption>
+        </figure>
+    </div>
 
-<div  class="foto" *ngFor="let foto of fotos; index as i">
-    <img src={{foto}} alt="no toy ????">
 </div>
