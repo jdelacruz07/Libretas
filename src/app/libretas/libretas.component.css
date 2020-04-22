@@ -8,26 +8,24 @@ h2{
 }
 
 h2:hover {
-    color: rgb(211, 122, 38);
+    color: rgb(228, 56, 13);
 }
 
 img {
     width: 350px;
     height: 233px;
-    margin: 5px;
-    flex: 0 1 auto;    
+    margin-bottom: 15px;
 }
 
 .encabezado-de-bolsillo {
+    font-family: 'Julius Sans One', sans-serif;
+    text-align: center;
     margin: 15px;
     background-color: #f8c5bd;
-    text-align: center;
-    font-family: 'Julius Sans One', sans-serif;
     border-radius: 15px;
 }
 
-.bolsillo {
-    padding-bottom: 15px;
+.images-bolsillo {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -35,14 +33,14 @@ img {
 }
 
 .encabezado-media-carta  {
-    margin: 15px;
+    font-family: 'Julius Sans One', sans-serif;
     text-align: center;
+    margin: 15px;
     background-color: #f8c5bd;
     border-radius: 15px;
 }
 
-.media-carta {
-    padding-bottom: 15px;
+.images-media-carta {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;

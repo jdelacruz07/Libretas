@@ -7,14 +7,16 @@ h1{
     text-align: center;
 }
 
-figure {
-    display: inline-block;
-    background-color: rgb(206, 148, 22);
- 
-}
 
 figcaption {
     text-align: center;
+}
+
+.images {
+    display: inline-block;
+    background-color: rgb(206, 148, 22);
+    margin: 0;
+    margin-bottom: 15px;
 }
 
 img {
@@ -26,7 +28,6 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    
 }
 
 @media (max-width: 576px) {
