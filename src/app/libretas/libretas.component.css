@@ -29,6 +29,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    border-bottom:  1px dashed black;
 }
 
 .encabezado-de-bolsillo {
@@ -43,7 +44,6 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    border-bottom:  1px dashed black;
 }
 
 @media (max-width: 576px) {
