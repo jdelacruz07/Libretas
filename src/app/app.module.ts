@@ -10,6 +10,8 @@ import { HeaderComponent } from './header/header.component';
 import { LibretasComponent } from './libretas/libretas.component';
 import { LibretaBolsilloComponent } from './libreta-bolsillo/libreta-bolsillo.component';
 import { LibretaMediaCartaComponent } from './libreta-media-carta/libreta-media-carta.component';
+import { MatButtonModule } from '@angular/material/button';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { LibretaMediaCartaComponent } from './libreta-media-carta/libreta-media-
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSliderModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
