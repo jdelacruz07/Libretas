@@ -1,4 +1,5 @@
 import { Component, OnInit, SystemJsNgModuleLoaderConfig } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-libreta-bolsillo',
@@ -15,9 +16,15 @@ export class LibretaBolsilloComponent implements OnInit {
   
   ];
 
-  constructor() { }
+  materiales: String = '';
+
+  constructor(private aR: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.aR.params.subscribe((params) => {
+      this.materiales = params['material'];
+      console.log( 'material');
+    })
   }
 
   

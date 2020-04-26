@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-libreta-media-carta',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./libreta-media-carta.component.css']
 })
 export class LibretaMediaCartaComponent implements OnInit {
+  materiales: String = '';
 
-  constructor() { }
+  constructor(private aR: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.aR.params.subscribe((params) => {
+      this.materiales = params['material'];
+      console.log( 'material');
+    })
   }
 
 

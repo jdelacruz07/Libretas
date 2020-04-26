@@ -10,10 +10,10 @@ const routes: Routes = [
     path: '', component: LibretasComponent
   }, 
   { 
-    path: 'libreta-bolsillo', component: LibretaBolsilloComponent
+    path: 'libreta-bolsillo/:material', component: LibretaBolsilloComponent
   },
   { 
-    path: 'libreta-media-carta', component: LibretaMediaCartaComponent
+    path: 'libreta-media-carta/:material', component: LibretaMediaCartaComponent
   }
 ];
 
