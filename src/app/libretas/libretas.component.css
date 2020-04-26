@@ -17,6 +17,20 @@ img {
     margin-bottom: 15px;
 }
 
+.encabezado-media-carta  {
+    font-family: 'Julius Sans One', sans-serif;
+    text-align: center;
+    margin: 15px;
+    background-color: #f8c5bd;
+    border-radius: 15px;
+}
+
+.images-media-carta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 .encabezado-de-bolsillo {
     font-family: 'Julius Sans One', sans-serif;
     text-align: center;
@@ -30,20 +44,6 @@ img {
     flex-wrap: wrap;
     justify-content: space-evenly;
     border-bottom:  1px dashed black;
-}
-
-.encabezado-media-carta  {
-    font-family: 'Julius Sans One', sans-serif;
-    text-align: center;
-    margin: 15px;
-    background-color: #f8c5bd;
-    border-radius: 15px;
-}
-
-.images-media-carta {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
 }
 
 @media (max-width: 576px) {
