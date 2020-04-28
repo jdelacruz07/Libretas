@@ -23,7 +23,6 @@ export class LibretaBolsilloComponent implements OnInit {
   ngOnInit(): void {
     this.aR.params.subscribe((params) => {
       this.materiales = params['material'];
-      console.log( 'material');
     })
   }
 
