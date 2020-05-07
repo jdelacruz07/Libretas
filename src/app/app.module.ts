@@ -11,6 +11,7 @@ import { LibretasComponent } from './libretas/libretas.component';
 import { LibretaBolsilloComponent } from './libreta-bolsillo/libreta-bolsillo.component';
 import { LibretaMediaCartaComponent } from './libreta-media-carta/libreta-media-carta.component';
 import { MatButtonModule } from '@angular/material/button';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { MatButtonModule } from '@angular/material/button';
     BrowserAnimationsModule,
     MatSliderModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

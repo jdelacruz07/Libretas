@@ -11,10 +11,9 @@ button {
     margin: 0 15px 15px 0;
     background-color: rgba(111, 111, 175, .1);
 }
+
 img {
-    width: 350px;
-    height: 233px;
-    margin-bottom: 15px;
+    width: 100%;
 }
 
 .encabezado-media-carta  {
@@ -23,13 +22,6 @@ img {
     margin: 15px;
     border-radius: 15px;
     background-color: #f8c5bd;
-}
-
-.images-media-carta {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    border-bottom:  1px dashed black;
 }
 
 .encabezado-de-bolsillo {
@@ -46,8 +38,13 @@ img {
     justify-content: space-evenly;
 }
 
+.img-bolsillo {  
+    width: 350px;
+    height: 245px;
+}
+
 @media (max-width: 576px) {
-    img { 
+    .img-bolsillo { 
         width: 100px;
         height: 67px;
     }
