@@ -43,6 +43,15 @@ img {
     height: 245px;
 }
 
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer img {
+    width: 25px;
+}
+
 @media (max-width: 576px) {
     .img-bolsillo { 
         width: 100px;
