@@ -7,8 +7,11 @@ import { LibretaMediaCartaComponent } from './libreta-media-carta/libreta-media-
 const routes: Routes = [
 
   { 
-    path: '', component: LibretasComponent
-  }, 
+    path: '', redirectTo: 'libretas', pathMatch: 'full'
+  },
+  { 
+    path: 'libretas', component: LibretasComponent
+  },
   { 
     path: 'libreta-bolsillo/:material', component: LibretaBolsilloComponent
   },
