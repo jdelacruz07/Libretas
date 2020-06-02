@@ -16,7 +16,13 @@ const routes: Routes = [
     path: 'libreta-bolsillo/:material', component: LibretaBolsilloComponent
   },
   { 
+    path: 'libreta-bolsillo', component: LibretaBolsilloComponent
+  },
+  { 
     path: 'libreta-media-carta/:material', component: LibretaMediaCartaComponent
+  },
+  { 
+    path: 'libreta-media-carta', component: LibretaMediaCartaComponent
   }
 ];
 

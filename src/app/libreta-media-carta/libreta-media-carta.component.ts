@@ -14,7 +14,7 @@ export class LibretaMediaCartaComponent implements OnInit {
   ngOnInit(): void {
     this.aR.params.subscribe((params) => {
       this.materiales = params['material'];
-      console.log( 'material');
+      console.log("Este es el tipo de material de Media Carta", this.materiales);
     })
   }
 

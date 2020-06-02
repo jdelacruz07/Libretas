@@ -2,10 +2,19 @@
     <h1>Libretas de bolsillo</h1>
     <div class="images-bolsillo"  >
         <figure class="images" *ngFor="let foto of fotos; index as i">
-            <div *ngIf="foto.material == materiales">
+            
+            <div *ngIf="materiales !== undefined; else allFotos">
+                <div *ngIf="foto.material == materiales">
+                    <img  src="{{foto.url}}" alt="no toy ????" >       
+                    <figcaption>{{foto.material}}</figcaption>
+                </div>    
+            </div>
+
+            <ng-template #allFotos>
                 <img src="{{foto.url}}" alt="no toy ????" >       
                 <figcaption>{{foto.material}}</figcaption>
-            </div>
+            </ng-template>
+            
         </figure>
     </div>
 </div>
