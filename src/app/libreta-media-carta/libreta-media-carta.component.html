@@ -1,23 +1,21 @@
 <div class="container">
 
     <h1>Libretas media carta</h1>
-    <div class="flex">
-        <figure  class="foto" *ngFor="let foto of fotos; index as i">
+    <div class="foto-flex"> 
+        <figure  *ngFor="let foto of fotos; index as i">
             <div *ngIf="materiales !== undefined; else allFotos">
                 <div *ngIf="foto.material == materiales">
                     <img src={{foto.url}} alt="no toy ????">
                     <figcaption> {{foto.material}}</figcaption>
                 </div>
             </div>
-
+            
             <ng-template #allFotos>
                 <div *ngIf="foto.material">
                     <img src={{foto.url}} alt="no toy ????">
                     <figcaption> {{foto.material}}</figcaption>
                 </div>
             </ng-template>
-
         </figure>
     </div>
-
 </div>
