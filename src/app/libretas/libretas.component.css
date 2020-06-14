@@ -16,6 +16,11 @@ img {
     width: 100%;
 }
 
+.carrousel {
+    margin: auto;
+    max-width: 60%;
+}
+
 .encabezado-media-carta  {
     font-family: 'Julius Sans One', sans-serif;
     text-align: center;

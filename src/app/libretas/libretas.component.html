@@ -9,7 +9,9 @@
                 <button routerLink="/libreta-media-carta/Tela" mat-raised-button>Tela</button>
             </div>
             
-            <ngb-carousel *ngIf="images">
+            <div class="carrousel">
+
+              <ngb-carousel *ngIf="images">
                 <ng-template ngbSlide>
                   <div class="picsum-img-wrapper">
                     <img [src]="images[0]" alt="Random first slide">
@@ -38,6 +40,7 @@
                   </div>
                 </ng-template>
               </ngb-carousel>
+            </div>
 
         </section>
 
