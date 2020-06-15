@@ -16,7 +16,12 @@ img {
     width: 100%;
 }
 
-.carrousel {
+.carrousel-artesanal {
+    margin: auto;
+    max-width: 90%;
+}
+
+.carrousel-bolsillo {
     margin: auto;
     max-width: 90%;
 }

@@ -9,12 +9,12 @@
                 <button routerLink="/libreta-media-carta/Tela" mat-raised-button>Tela</button>
             </div>
             
-            <div class="carrousel">
+            <div class="carrousel-artesanal">
 
-              <ngb-carousel *ngIf="images">
+              <ngb-carousel *ngIf="imageArtesanal">
                 <ng-template ngbSlide>
                   <div class="picsum-img-wrapper">
-                    <img [src]="images[0]" alt="Random first slide">
+                    <img [src]="imageArtesanal[0]" alt="Random first slide">
                   </div>
                   <div class="carousel-caption">
                     <h3></h3>
@@ -23,7 +23,7 @@
                 </ng-template>
                 <ng-template ngbSlide>
                   <div class="picsum-img-wrapper">
-                    <img [src]="images[1]" alt="Random second slide">
+                    <img [src]="imageArtesanal[1]" alt="Random second slide">
                   </div>
                   <div class="carousel-caption">
                     <h3></h3>
@@ -32,7 +32,7 @@
                 </ng-template>
                 <ng-template ngbSlide>
                   <div class="picsum-img-wrapper">
-                    <img [src]="images[2]" alt="Random third slide">
+                    <img [src]="imageArtesanal[2]" alt="Random third slide">
                   </div>
                   <div class="carousel-caption">
                     <h3></h3>
@@ -50,10 +50,37 @@
                 <button routerLink="/libreta-bolsillo/Papel" mat-raised-button>Papel</button>
                 <button routerLink="/libreta-bolsillo/Tela" mat-raised-button>Tela</button>
             </div>
-            <div class="bolsillo-flex">
-                <img class="image-bolsillo" src="/assets/IMG_4319.JPG" alt="no toy ????">
-                <img class="image-bolsillo" src="/assets/IMG_4326.JPG" alt="no toy ????">
-                <img class="image-bolsillo" src="/assets/IMG_4327.JPG" alt="no toy ????">
+            <div class="carrousel-bolsillo">
+
+              <ngb-carousel *ngIf="imageBolsillo">
+                <ng-template ngbSlide>
+                  <div class="picsum-img-wrapper">
+                    <img [src]="imageBolsillo[0]" alt="Random first slide">
+                  </div>
+                  <div class="carousel-caption">
+                    <h3></h3>
+                    <p></p>
+                  </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                  <div class="picsum-img-wrapper">
+                    <img [src]="imageBolsillo[1]" alt="Random second slide">
+                  </div>
+                  <div class="carousel-caption">
+                    <h3></h3>
+                    <p></p>
+                  </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                  <div class="picsum-img-wrapper">
+                    <img [src]="imageBolsillo[2]" alt="Random third slide">
+                  </div>
+                  <div class="carousel-caption">
+                    <h3></h3>
+                    <p></p>
+                  </div>
+                </ng-template>
+              </ngb-carousel>
             </div>
         </section >
     </div>
