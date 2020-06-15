@@ -20,7 +20,6 @@ export class LibretaMediaCartaComponent implements OnInit {
 
 
   fotos = [
-      
     {url:"/assets/IMG_4317.JPG", material: "Papel"},  
     {url:"/assets/IMG_4343.JPG", material: "Papel"},
     {url:"/assets/IMG_4360.JPG", material: "Papel"},
