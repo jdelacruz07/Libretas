@@ -1,7 +1,7 @@
 <div class="container">
     <h1>Libretas de bolsillo</h1>
-    <div class="images-bolsillo"  >
-        <figure class="images" *ngFor="let foto of fotos; index as i">
+    <div class="bolsillo-flex"  >
+        <figure *ngFor="let foto of fotos; index as i">
             
             <div *ngIf="materiales !== undefined; else allFotos">
                 <div *ngIf="foto.material == materiales">

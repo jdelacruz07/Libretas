@@ -7,27 +7,21 @@ h1{
     text-align: center;
 }
 
-
-figcaption {
-    text-align: center;
-}
-
-.images {
-    display: inline-block;
-    background-color: rgb(206, 148, 22);
-    margin: 0;
-    margin-bottom: 15px;
-}
-
 img {
     width: 350px;
     height: 233px;   
 }
 
-.images-bolsillo {
+.bolsillo-flex {
+  
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+                   
+figcaption {
+    text-align: center;
+    background-color: rgb(206, 148, 22);
 }
 
 @media (max-width: 576px) {

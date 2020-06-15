@@ -18,7 +18,7 @@ img {
 
 .carrousel {
     margin: auto;
-    max-width: 60%;
+    max-width: 75%;
 }
 
 .encabezado-media-carta  {
@@ -36,13 +36,13 @@ img {
     border-radius: 15px;
 }
 
-.images-bolsillo {
+.bolsillo-flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-.img-bolsillo {  
+.image-bolsillo {  
     width: 350px;
     height: 233px;
     padding-bottom: 15px;
