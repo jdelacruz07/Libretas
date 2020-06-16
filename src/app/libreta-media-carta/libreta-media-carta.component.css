@@ -20,13 +20,19 @@ img {
 }
 
 figcaption {
-    text-align: center;
+    text-align: center; 
     background: rgb(206, 148, 22);
+    text-overflow: clip;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 @media (max-width: 576px) {
     img { 
         width: 100px;
         height: 67px;
+    }
+    figure {
+        width: 100px;
     }
 }

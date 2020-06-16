@@ -17,16 +17,27 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+
 }
-                   
+
 figcaption {
+    background: rgb(206, 148, 22);
     text-align: center;
-    background-color: rgb(206, 148, 22);
+    text-overflow: clip;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 @media (max-width: 576px) {
     img { 
+        margin: 0 auto;
         width: 100px;
         height: 67px;
     }
+    figure {
+        margin: auto;
+        width: 100px;
+        padding-bottom: 10px;
+    }
+    
 }
