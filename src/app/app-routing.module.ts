@@ -10,19 +10,19 @@ const routes: Routes = [
     path: '', redirectTo: 'libretas', pathMatch: 'full'
   },
   { 
-    path: 'yailin.herokuapp.com/libretas', component: LibretasComponent
+    path: 'libretas', component: LibretasComponent
   },
   { 
-    path: 'yailin.herokuapp.com/libreta-bolsillo/:material', component: LibretaBolsilloComponent
+    path: 'libreta-bolsillo/:material', component: LibretaBolsilloComponent
   },
   { 
-    path: 'yailin.herokuapp.com/libreta-bolsillo', component: LibretaBolsilloComponent
+    path: 'libreta-bolsillo', component: LibretaBolsilloComponent
   },
   { 
-    path: 'yailin.herokuapp.com/libreta-media-carta/:material', component: LibretaMediaCartaComponent
+    path: 'libreta-media-carta/:material', component: LibretaMediaCartaComponent
   },
   { 
-    path: 'yailin.herokuapp.com/libreta-media-carta', component: LibretaMediaCartaComponent
+    path: 'libreta-media-carta', component: LibretaMediaCartaComponent
   }
 ];
 
