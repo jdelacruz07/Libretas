@@ -1,5 +1,6 @@
 import { Component, OnInit, SystemJsNgModuleLoaderConfig } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-libreta-bolsillo',
@@ -7,27 +8,21 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./libreta-bolsillo.component.css']
 })
 export class LibretaBolsilloComponent implements OnInit {  
-    materiales: string = '';
-    fotos = [
-        {url: "/assets/IMG_4319.JPG", material: "Piel"},
-        {url: "/assets/IMG_4326.JPG", material: "Tela"},
-        {url: "/assets/IMG_4327.JPG", material: "Papel"}
-      ];
+    material: string = '';
+    libretas; 
 
-  constructor(private aR: ActivatedRoute) { }
+  constructor(private aR: ActivatedRoute, private apiService: ApiService) { }
 
   ngOnInit(): void {
-
-    
       this.aR.params.subscribe((params) => {
-        
-          this.materiales = params['material']; 
-          console.log("Este es el tipo de material 1", this.materiales)
-        
+          this.material = params['material']; 
+          console.log("Este es el tipo de material 1", this.material)
       })
-    
-
-    
+      if (this.material) {
+        this.libretas = this.apiService.getLibretasBolsillo(this.material);
+      } else {
+        this.libretas = this.apiService.getAllLibretasBolsillo();
+      }
   }
 
   

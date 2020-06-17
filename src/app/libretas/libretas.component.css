@@ -27,7 +27,7 @@ img {
 }
 
 .encabezado-media-carta  {
-    font-family: 'Julius Sans One', sans-serif;
+    /*font-family: 'Julius Sans One', sans-serif;*/
     text-align: center;
     margin: 15px;
     border-radius: 15px;
@@ -36,9 +36,9 @@ img {
 
 .encabezado-de-bolsillo {
     text-align: center;
-    margin: 15px 0 15px 0;
-    background-color: #f8c5bd;  
+    margin: 15px;
     border-radius: 15px;
+    background-color: #f8c5bd;  
 }
 
 .bolsillo-flex {

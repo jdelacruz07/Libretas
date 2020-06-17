@@ -14,13 +14,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LibretasComponent,
     LibretaBolsilloComponent,
-    LibretaMediaCartaComponent
+    LibretaMediaCartaComponent,
+   
   ],
   imports: [
     BrowserModule,

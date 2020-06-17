@@ -2,20 +2,20 @@
 
     <h1>Libretas artesanales</h1>
     <div class="foto-flex"> 
-        <figure  *ngFor="let foto of fotos; index as i">
-            <div *ngIf="materiales !== undefined; else allFotos">
-                <div *ngIf="foto.material == materiales">
-                    <img src={{foto.url}} alt="no toy ????">
-                    <figcaption>Libreta hecha a mano de {{foto.material}} </figcaption>
+        <figure  *ngFor="let libreta of libretas; index as i">
+            <div *ngIf="material !== undefined; else allFotos">
+                <div *ngIf="libreta.material == material">
+                    <img src={{libreta.url}} alt="no toy ????">
+                    <figcaption>Libreta hecha a mano de {{libreta.material}} </figcaption>
                     <figcaption>Diseño Yailin</figcaption>
                     <figcaption>$230</figcaption>
                 </div>
             </div>
             
             <ng-template #allFotos>
-                <div *ngIf="foto.material">
-                    <img src={{foto.url}} alt="no toy ????">
-                    <figcaption>Libreta hecha a mano de {{foto.material}} </figcaption>
+                <div *ngIf="libreta.material">
+                    <img src={{libreta.url}} alt="no toy ????">
+                    <figcaption>Libreta hecha a mano de {{libreta.material}} </figcaption>
                     <figcaption>Diseño Yailin</figcaption>
                     <figcaption>$230</figcaption>
                 </div>
