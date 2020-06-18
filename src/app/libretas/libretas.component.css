@@ -46,7 +46,6 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    
 }
 
 .image-bolsillo {  
@@ -64,9 +63,17 @@ img {
     width: 25px;
 }
 
+.libretas {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section {
+    width: 50%;
+}
+
 @media (max-width: 576px) {
-    .image-bolsillo { 
-        width: 100px;
-        height: 67px;
+    section {
+        width: 100%;
     }
 }
