@@ -24,8 +24,6 @@ h2 {
 .header {
     border-color: rgb(202, 25, 25);
     border-radius: 15px;
-    
-    
 }
 
 h3 {
@@ -35,9 +33,12 @@ h3 {
     font-family: 'Rochester', cursive;
 }
 
-
+ul {
+    align-items: baseline;
+}
 
 .linkActive {
     background-color:  #DFF0D8;
 }
+
 
