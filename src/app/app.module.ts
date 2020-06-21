@@ -12,6 +12,8 @@ import { LibretaBolsilloComponent } from './libreta-bolsillo/libreta-bolsillo.co
 import { LibretaMediaCartaComponent } from './libreta-media-carta/libreta-media-carta.component';
 import { MatButtonModule } from '@angular/material/button';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NewLibretaComponent } from './new-libreta/new-libreta.component';
+import { ReactiveFormsModule} from '@angular/forms';
 
 
 
@@ -22,6 +24,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     LibretasComponent,
     LibretaBolsilloComponent,
     LibretaMediaCartaComponent,
+    NewLibretaComponent,
    
   ],
   imports: [
@@ -31,7 +34,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatSliderModule,
     MatIconModule,
     MatButtonModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

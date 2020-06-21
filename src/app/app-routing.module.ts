@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LibretasComponent } from './libretas/libretas.component';
 import { LibretaBolsilloComponent } from './libreta-bolsillo/libreta-bolsillo.component'
 import { LibretaMediaCartaComponent } from './libreta-media-carta/libreta-media-carta.component';
+import { NewLibretaComponent } from './new-libreta/new-libreta.component';
 
 const routes: Routes = [
 
@@ -23,6 +24,9 @@ const routes: Routes = [
   },
   { 
     path: 'libreta-media-carta', component: LibretaMediaCartaComponent
+  },
+  { 
+    path: 'new-libreta', component: NewLibretaComponent
   }
 ];
 

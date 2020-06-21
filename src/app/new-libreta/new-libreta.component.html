@@ -1,0 +1,15 @@
+<h1>Nueva libreta</h1>
+
+<form [formGroup]="form" (ngSubmit)="addNotebook(form.value)" >
+    <label for="">Descripcion de la nueva libreta: </label>
+    <input type="text" placeholder="Descripcion" formControlName="descripcion"><br>
+    <label for="">Precio: </label>
+    <input type="number" placeholder="230.00" formControlName="precio"><br>
+    <label  for="">Url de la foto: </label>
+    <input type="url" placeholder="notebook.jpg" formControlName="url"><br>
+    <label  for="">Tipo de libreta: </label>
+    <input type="radio" name="typeOfNotebbok" value="libreta" formControlName="typeOfNotebbok"> Libreta 
+    <input type="radio" name="typeOfNotebbok" value="libreta-de-bolsillo" formControlName="typeOfNotebbok"> libreta-de-bolsillo <br>
+    <br>
+    <button type="submit">Agregar nueva libreta</button>
+</form>
