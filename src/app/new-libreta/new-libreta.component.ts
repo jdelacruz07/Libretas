@@ -9,7 +9,10 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class NewLibretaComponent implements OnInit {
   form: FormGroup;
-  notebook: any[];
+  newNotebook = {
+    descripcion: '', precio: 10, typeOfNotebook: '',  url: '' 
+  };
+ 
   constructor() { }
 
   ngOnInit(): void {
@@ -17,19 +20,30 @@ export class NewLibretaComponent implements OnInit {
       descripcion: new FormControl(''),
       precio: new FormControl(''),
       url: new FormControl(''),
-      typeOfNotebbok: new FormControl(''),
+      typeOfNotebook: new FormControl(''),
       
     });
   }
 
-  addNotebook(newNotebook) {
-    console.log("Formulario Enviado ...", newNotebook);
-    this.notebook.push(newNotebook);
-    console.log("Formulario Enviado ...", this.notebook);
-
+  addNotebook(notebook) {
+    console.log("Formulario Enviado ...", notebook);
+    this.newNotebook = notebook;
+    /*
+    this.newNotebook.descripcion = notebook.descripcion; 
+    this.newNotebook.precio = notebook.precio; 
+    this.newNotebook.typeOfNotebook = notebook.typeOfNotebook; 
+    this.newNotebook.url = notebook.url; 
+    */
+    
+    console.log("Nueva Libreta ...", this.newNotebook);
+    
   }
 }
 
 export interface notebook {
+  descripcion: string;
+  precio: number;
+  typeOfNotebook: string;
+  url: string;
 
 }
