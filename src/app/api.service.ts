@@ -27,6 +27,11 @@ export class ApiService {
 
   constructor() { }
 
+  addLibreta (libreta) {
+    this.libretaArtesanal.push(libreta);
+    console.log("Se agrega: ", libreta);
+  }
+
   getAllLibretasArtesanal(){
     return this.libretaArtesanal;
   }

@@ -1,15 +1,35 @@
-<h1>Nueva libreta</h1>
+<div class="container">
 
-<form [formGroup]="form" (ngSubmit)="addNotebook(form.value)" >
-    <label for="">Descripcion de la libreta: </label>
-    <input type="text" placeholder="Descripcion" formControlName="descripcion"><br>
-    <label for="">Precio: </label>
-    <input type="number" placeholder="230.00" formControlName="precio"><br>
-    <label  for="">Url de la foto: </label>
-    <input type="url" placeholder="notebook.jpg" formControlName="url"><br>
-    <label  for="">Tipo de libreta: </label>
-    <input type="radio" name="typeOfNotebook" value="libreta" formControlName="typeOfNotebook"> Libreta 
-    <input type="radio" name="typeOfNotebook" value="libreta-de-bolsillo" formControlName="typeOfNotebook"> libreta-de-bolsillo <br>
-    <br>
-    <button type="submit">Agregar</button>
-</form>
+    <h1>Libreta nueva</h1>
+    
+    <form [formGroup]="form" (ngSubmit)="addNotebook(form.value)" >
+        <div class="flex-field">
+            <div class="field">
+                <label for="">Descripción de la libreta: </label>
+                <input type="text" placeholder="Caracteristicas" formControlName="descripcion">
+            </div>
+            <div class="field">
+                <label for="">Precio: </label>
+                <input type="number" placeholder="230.00" formControlName="precio">
+            </div>
+            <div class="field">
+                <label  for="">Url de la foto: </label>
+                <input type="url" placeholder="/assets/IMG_4405.JPG" formControlName="url">
+            </div>
+            <div class="field">
+                <label  for="">Tipo de material: </label>
+                <select name="Material" id="" formControlName="material">
+                    <option value="Papel" selected>Papel</option>
+                    <option value="Tela">Tela</option>
+                </select>
+            </div>
+            <div class="field">
+                <label  for="">Tipo de libreta: </label>
+                <input type="radio" name="typeOfNotebook" value="libreta" formControlName="typeOfNotebook"> Libreta 
+                <input type="radio" name="typeOfNotebook" value="libreta-de-bolsillo" formControlName="typeOfNotebook"> Libreta de bolsillo 
+            </div>
+        </div>
+        <button type="submit">Agregar</button>
+    </form>
+
+</div>

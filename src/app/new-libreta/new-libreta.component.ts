@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { ApiService } from '../api.service'
 
 
 @Component({
@@ -9,17 +10,16 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class NewLibretaComponent implements OnInit {
   form: FormGroup;
-  newNotebook = {
-    descripcion: '', precio: 10, typeOfNotebook: '',  url: '' 
-  };
+  newNotebook: notebook;
  
-  constructor() { }
+  constructor(private api: ApiService) { }
 
   ngOnInit(): void {
     this.form = new FormGroup({
       descripcion: new FormControl(''),
       precio: new FormControl(''),
       url: new FormControl(''),
+      material: new FormControl(''),
       typeOfNotebook: new FormControl(''),
       
     });
@@ -28,22 +28,27 @@ export class NewLibretaComponent implements OnInit {
   addNotebook(notebook) {
     console.log("Formulario Enviado ...", notebook);
     this.newNotebook = notebook;
-    /*
-    this.newNotebook.descripcion = notebook.descripcion; 
-    this.newNotebook.precio = notebook.precio; 
-    this.newNotebook.typeOfNotebook = notebook.typeOfNotebook; 
-    this.newNotebook.url = notebook.url; 
-    */
-    
     console.log("Nueva Libreta ...", this.newNotebook);
-    
+    this.api.addLibreta(this.newNotebook);
   }
 }
 
-export interface notebook {
-  descripcion: string;
+export class notebook {
+/*  descripcion: string;
   precio: number;
-  typeOfNotebook: string;
-  url: string;
+  typeOfNotebook: string;*/
+  url: string; 
+  material: string;
+
+  constructor ( url: string, material: string ) {
+  /*
+  constructor ( descripcion: string, precio: number, typeOfNotebook: string, url: string, material: string ) {
+    this.descripcion = descripcion;
+    this.precio = precio;
+    this.typeOfNotebook = typeOfNotebook;*/
+    this.url = url;
+    this.material = material;
+  }
+
 
 }
