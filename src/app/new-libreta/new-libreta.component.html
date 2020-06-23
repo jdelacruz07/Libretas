@@ -2,34 +2,43 @@
 
     <h1>Libreta nueva</h1>
     
-    <form [formGroup]="form" (ngSubmit)="addNotebook(form.value)" >
-        <div class="flex-field">
-            <div class="field">
-                <label for="">Descripción de la libreta: </label>
-                <input type="text" placeholder="Caracteristicas" formControlName="descripcion">
+    <form [formGroup]="form" (ngSubmit)="addNotebook(form.value)" class="form-group">
+        <div >
+            <div class="form-group form-inline">
+                <label class="form-control-label" for="">Descripción de la libreta: </label>
+                <input class="form-control"  type="text" placeholder="Caracteristicas" formControlName="descripcion">
             </div>
-            <div class="field">
-                <label for="">Precio: </label>
-                <input type="number" placeholder="230.00" formControlName="precio">
+            <div class="form-group form-inline">
+                <label class="form-control-label" for="">Precio: </label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">$</div>
+                    </div>
+                    <input  class="form-control"   type="number" placeholder="230.00" formControlName="precio">
+                </div>
             </div>
-            <div class="field">
-                <label  for="">Url de la foto: </label>
-                <input type="url" placeholder="/assets/IMG_4405.JPG" formControlName="url">
+            <div class="form-group form-inline">
+                <label  class="form-control-label" for="">Url de la foto: </label>
+                <input  class="form-control"  type="url" placeholder="/assets/IMG_4405.JPG" formControlName="url">
             </div>
-            <div class="field">
-                <label  for="">Tipo de material: </label>
-                <select name="Material" id="" formControlName="material">
-                    <option value="Papel" selected>Papel</option>
-                    <option value="Tela">Tela</option>
+            <div class="form-group">
+                <label  class="form-control-label" for="">Tipo de material: </label>
+                <select name="material" formControlName="material">
+                    <option selected>Papel</option>
+                    <option>Tela</option>
                 </select>
             </div>
-            <div class="field">
-                <label  for="">Tipo de libreta: </label>
-                <input type="radio" name="typeOfNotebook" value="libreta" formControlName="typeOfNotebook"> Libreta media carta
-                <input type="radio" name="typeOfNotebook" value="libreta-de-bolsillo" formControlName="typeOfNotebook"> Libreta de bolsillo 
+            <div class="form-group">
+                <label class="form-check-label d-block"  for="">Tipo: </label>
+                <div class="form-check-inline">
+                    <input type="radio" name="typeOfNotebook" value="libreta" formControlName="typeOfNotebook"> Libreta media carta
+                </div>
+                <div class="form-check-inline">
+                    <input type="radio" name="typeOfNotebook" value="libreta-de-bolsillo" formControlName="typeOfNotebook"> Libreta de bolsillo 
+                </div>
             </div>
         </div>
-        <button type="submit">Agregar</button>
+        <button class="btn btn-primary"  type="submit">Agregar</button>
     </form>
 
 </div>
