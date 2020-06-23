@@ -29,23 +29,25 @@ export class NewLibretaComponent implements OnInit {
     console.log("Formulario Enviado ...", notebook);
     this.newNotebook = notebook;
     console.log("Nueva Libreta ...", this.newNotebook);
-    this.api.addLibreta(this.newNotebook);
+    if (this.newNotebook.typeOfNotebook == "libreta")
+      this.api.addLibreta(this.newNotebook);
+    else {
+      this.api.addLibretaBolsillo(this.newNotebook);
+    }
   }
 }
 
 export class notebook {
-/*  descripcion: string;
+  descripcion: string;
   precio: number;
-  typeOfNotebook: string;*/
+  typeOfNotebook: string;
   url: string; 
   material: string;
 
-  constructor ( url: string, material: string ) {
-  /*
   constructor ( descripcion: string, precio: number, typeOfNotebook: string, url: string, material: string ) {
     this.descripcion = descripcion;
     this.precio = precio;
-    this.typeOfNotebook = typeOfNotebook;*/
+    this.typeOfNotebook = typeOfNotebook;
     this.url = url;
     this.material = material;
   }

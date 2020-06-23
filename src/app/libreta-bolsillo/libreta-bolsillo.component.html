@@ -5,17 +5,17 @@
             <div *ngIf="material !== undefined; else allFotos">
                 <div *ngIf="libreta.material == material">
                     <img  src="{{libreta.url}}" alt="no toy ????" >       
-                    <figcaption>Libreta hecha a mano de {{libreta.material}} </figcaption>
-                    <figcaption>Yailin</figcaption>
-                    <figcaption>$130</figcaption>
+                    <figcaption>Libreta de {{libreta.material}} </figcaption>
+                    <figcaption>{{libreta.descripcion}}</figcaption>
+                    <figcaption>{{libreta.precio | currency}}</figcaption>
                 </div>    
             </div>
 
             <ng-template #allFotos>
                 <img src="{{libreta.url}}" alt="no toy ????" >       
-                <figcaption>Libreta hecha a mano de {{libreta.material}} </figcaption>
-                <figcaption>Yailin</figcaption>
-                <figcaption>$130</figcaption>
+                <figcaption>Libreta de {{libreta.material}}</figcaption>
+                <figcaption>{{libreta.descripcion}}</figcaption>
+                <figcaption>{{libreta.precio | currency}} </figcaption>
             </ng-template>
             
         </figure>
