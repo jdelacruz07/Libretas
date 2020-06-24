@@ -15,6 +15,7 @@ button {
 .libreta-added {
     color: #1511b6;
     background-color: #b1f831;
-    padding: 15px;
+    padding: 5px;
+    margin-bottom: 5px;
 }
 
