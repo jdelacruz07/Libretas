@@ -8,14 +8,18 @@ import { notebook } from '../new-libreta/new-libreta.component';
   styleUrls: ['./shopping-cart.component.css']
 })
 export class ShoppingCartComponent implements OnInit {
+  buyOfNotebooks: notebook;
 
   constructor(private buyNotebook: BuyNotebookService) { }
 
   ngOnInit(): void {
+   this.getBuy();
   }
 
   getBuy () {
-    this.buyNotebook.getBuy();
+    this.buyOfNotebooks = this.buyNotebook.getBuy();
   }
+  
 
 }
+

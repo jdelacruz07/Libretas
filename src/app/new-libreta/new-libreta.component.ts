@@ -57,6 +57,4 @@ export class notebook {
     this.url = url;
     this.material = material;
   }
-
-
 }

@@ -23,10 +23,12 @@ export class DescriptionComponent implements OnInit {
     console.log("Libreta a describir", this.libreta);
   }
 
-  addCar (notebook) {
-    this.buyNotebook.addNotebook(notebook);
-    console.log("Agregado ", notebook)
-  }
+  addCar (libreta) {
+    console.log("Libreta a agregar ", libreta)
+    this.buyNotebook.addNotebook(libreta);
+    
+    
+    }
 
 }
 
