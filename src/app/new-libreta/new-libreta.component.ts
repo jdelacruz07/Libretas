@@ -29,10 +29,13 @@ export class NewLibretaComponent implements OnInit {
     console.log("Formulario Enviado ...", notebook);
     this.newNotebook = notebook;
     console.log("Nueva Libreta ...", this.newNotebook);
-    if (this.newNotebook.typeOfNotebook == "libreta")
+    if (this.newNotebook.typeOfNotebook == "libreta") {
       this.api.addLibreta(this.newNotebook);
-    else {
+      this.form.reset()
+      
+    } else {
       this.api.addLibretaBolsillo(this.newNotebook);
+      this.form.reset()
     }
   }
 }

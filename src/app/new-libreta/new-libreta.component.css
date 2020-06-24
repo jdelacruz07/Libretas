@@ -12,5 +12,9 @@ button {
     float: right;
 }
 
-
+.libreta-added {
+    color: #1511b6;
+    background-color: #b1f831;
+    padding: 15px;
+}
 
