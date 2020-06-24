@@ -1,5 +1,7 @@
 img {
     float: left;
+    width: 300px;
+    margin: 10px;
 }
 
 button {
@@ -8,5 +10,5 @@ button {
 
 .container {
     margin: auto;
-    max-width: 90%;
+    max-width: 85%;
 }
