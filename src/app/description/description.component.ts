@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../api.service';
+import { BuyNotebookService } from '../buy-notebook.service';
 
 @Component({
   selector: 'app-description',
@@ -12,7 +13,7 @@ export class DescriptionComponent implements OnInit {
   libreta: notebook;
   index: number;
   
-  constructor(private aR: ActivatedRoute, private api: ApiService) { }
+  constructor(private aR: ActivatedRoute, private api: ApiService, private buyNotebook: BuyNotebookService) { }
 
   ngOnInit(): void {
     this.aR.params.subscribe((params) => {
@@ -22,8 +23,9 @@ export class DescriptionComponent implements OnInit {
     console.log("Libreta a describir", this.libreta);
   }
 
-  addCar (precio) {
-    console.log("Agregado ", precio)
+  addCar (notebook) {
+    this.buyNotebook.addNotebook(notebook);
+    console.log("Agregado ", notebook)
   }
 
 }
