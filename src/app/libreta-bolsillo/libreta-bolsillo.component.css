@@ -23,7 +23,7 @@ img {
 }
 
 figcaption {
-    background: rgb(206, 148, 22);
+    background: #e4fcce;
     text-align: center;
     text-overflow: clip;
     overflow: hidden;

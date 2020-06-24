@@ -5,7 +5,10 @@
         <p>De {{libreta.material}}</p>
         <p>{{libreta.descripcion}}</p>
         <p>Precio: {{libreta.precio  | currency}}</p>
-    </div><br><br><br><br><br><br>
+    </div>
     
     <button type="submit" (click)="addCar(libreta.precio)">Agregar al carrito</button>
 </div>
+
+
+<app-shopping-cart></app-shopping-cart>

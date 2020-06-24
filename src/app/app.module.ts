@@ -15,6 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NewLibretaComponent } from './new-libreta/new-libreta.component';
 import { ReactiveFormsModule} from '@angular/forms';
 import { DescriptionComponent } from './description/description.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 
 
@@ -27,6 +28,7 @@ import { DescriptionComponent } from './description/description.component';
     LibretaMediaCartaComponent,
     NewLibretaComponent,
     DescriptionComponent,
+    ShoppingCartComponent,
    
   ],
   imports: [
