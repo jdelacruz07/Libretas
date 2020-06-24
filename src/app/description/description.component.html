@@ -1,0 +1,11 @@
+<div class="container">
+    <div *ngIf="libreta">
+        <img src="{{libreta.url}}" alt="">
+        <p>{{libreta.typeOfNotebook}}</p>
+        <p>De {{libreta.material}}</p>
+        <p>{{libreta.descripcion}}</p>
+        <p>Precio: {{libreta.precio  | currency}}</p>
+    </div><br><br><br><br><br><br>
+    
+    <button type="submit" (click)="addCar(libreta.precio)">Agregar al carrito</button>
+</div>

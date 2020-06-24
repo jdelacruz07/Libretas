@@ -25,10 +25,13 @@ export class NewLibretaComponent implements OnInit {
     });
   }
 
-  addNotebook(notebook) {
+  addNotebook(notebook:notebook) {
     console.log("Formulario Enviado ...", notebook);
     this.newNotebook = notebook;
+    /*this.newNotebook.url = notebook.url.toLocaleUpperCase(); */
     console.log("Nueva Libreta ...", this.newNotebook);
+    console.log("Nueva Libreta ...", this.newNotebook.url);
+
     if (this.newNotebook.typeOfNotebook == "libreta") {
       this.api.addLibreta(this.newNotebook);
       this.form.reset()

@@ -4,6 +4,7 @@ import { LibretasComponent } from './libretas/libretas.component';
 import { LibretaBolsilloComponent } from './libreta-bolsillo/libreta-bolsillo.component'
 import { LibretaMediaCartaComponent } from './libreta-media-carta/libreta-media-carta.component';
 import { NewLibretaComponent } from './new-libreta/new-libreta.component';
+import { DescriptionComponent } from './description/description.component';
 
 const routes: Routes = [
 
@@ -27,6 +28,9 @@ const routes: Routes = [
   },
   { 
     path: 'new-libreta', component: NewLibretaComponent
+  },
+  { 
+    path: 'description/:index', component: DescriptionComponent
   }
 ];
 

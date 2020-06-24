@@ -14,6 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NewLibretaComponent } from './new-libreta/new-libreta.component';
 import { ReactiveFormsModule} from '@angular/forms';
+import { DescriptionComponent } from './description/description.component';
 
 
 
@@ -25,6 +26,7 @@ import { ReactiveFormsModule} from '@angular/forms';
     LibretaBolsilloComponent,
     LibretaMediaCartaComponent,
     NewLibretaComponent,
+    DescriptionComponent,
    
   ],
   imports: [

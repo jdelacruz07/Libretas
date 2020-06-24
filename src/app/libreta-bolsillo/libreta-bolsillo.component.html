@@ -1,24 +1,24 @@
 <div class="container">
     <h1>Libretas de bolsillo</h1>
     <div class="bolsillo-flex"  >
-        <figure *ngFor="let libreta of libretas; index as i">
-            <div *ngIf="material !== undefined; else allFotos">
-                <div *ngIf="libreta.material == material">
-                    <img  src="{{libreta.url}}" alt="no toy ????" >       
-                    <figcaption>Libreta de {{libreta.material}} </figcaption>
-                    <figcaption>{{libreta.descripcion}}</figcaption>
-                    <figcaption>{{libreta.precio | currency}}</figcaption>
-                </div>    
-            </div>
-
-            <ng-template #allFotos>
-                <img src="{{libreta.url}}" alt="no toy ????" >       
-                <figcaption>Libreta de {{libreta.material}}</figcaption>
-                <figcaption>{{libreta.descripcion}}</figcaption>
-                <figcaption>{{libreta.precio | currency}} </figcaption>
-            </ng-template>
-            
+        <figure *ngFor="let libreta of libretas; let indice = index">
+            <a routerLink="/description/{{indice}}">
+                <div *ngIf="material !== undefined; else allFotos">
+                    <div *ngIf="libreta.material == material">
+                        <img  src="{{libreta.url}}" alt="no toy ????" >    
+                        <figcaption>Libreta de {{libreta.material}} </figcaption> 
+                        <figcaption>{{libreta.precio | currency}}</figcaption>    
+                    </div>    
+                </div>
+                
+                <ng-template #allFotos>
+                    <img src="{{libreta.url}}" alt="no toy ????" >       
+                    <figcaption>Libreta de {{libreta.material}}</figcaption>
+                    <figcaption>{{libreta.precio | currency}} </figcaption>
+                </ng-template>
+                
+            </a>
         </figure>
     </div>
-</div>
+    
 
