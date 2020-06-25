@@ -32,14 +32,12 @@ figcaption {
 
 @media (max-width: 576px) {
     img { 
-        margin: 0 auto;
         width: 150px;
         height: 100px;
     }
     figure {
-        margin: auto;
-        width: 100px;
-        padding-bottom: 10px;
+        width: 150px;
+       
     }
     
 }
