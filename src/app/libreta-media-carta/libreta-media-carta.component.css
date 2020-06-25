@@ -31,8 +31,8 @@ figcaption {
 
 @media (max-width: 576px) {
     img { 
-        width: 100px;
-        height: 67px;
+        width: 150px;
+        height: 100px;
     }
     figure {
         width: 100px;
