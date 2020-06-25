@@ -32,11 +32,11 @@ figcaption {
 
 @media (max-width: 576px) {
     img { 
-        width: 150px;
-        height: 100px;
+        width: 140px;
+        height: 94px;
     }
     figure {
-        width: 150px;
+        width: 140px;
        
     }
     
