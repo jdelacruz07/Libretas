@@ -31,14 +31,16 @@ img {
     text-align: center;
     margin: 15px;
     border-radius: 15px;
-    background-color: #f8c5bd;
+    color: #7139b6;
+    background-color: #a4e984;
 }
 
 .encabezado-de-bolsillo {
     text-align: center;
     margin: 15px;
     border-radius: 15px;
-    background-color: #f8c5bd;  
+    color: #7139b6;
+    background-color: #a4e984;  
 }
 
 .bolsillo-flex {

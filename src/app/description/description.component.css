@@ -7,7 +7,6 @@ img {
 button {
     float: right;
     clear: both;
-    
 }
 
 .container {
@@ -16,7 +15,7 @@ button {
 }
 
 p {
-    padding: 10px;
+    padding: 5px;
 }
 
 .added {

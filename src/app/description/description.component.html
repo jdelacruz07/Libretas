@@ -8,10 +8,10 @@
         <p>Precio: {{libreta.precio  | currency}}</p>
     </div>
     
-    <button type="submit" (click)="addCar(libreta)">Comprar</button>
     <div class="added" *ngIf="addedNotebook">
         Libreta agregada Correctamente
     </div>
+    <button type="submit" (click)="addCar(libreta)">Comprar</button>
 </div>
 
 
