@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { notebook } from './new-libreta/new-libreta.component';
+import { notebook } from './description/description.component';
+
 
 
 @Injectable({
@@ -7,19 +8,19 @@ import { notebook } from './new-libreta/new-libreta.component';
 })
 export class BuyNotebookService {
 
-  buyOfNotebooks: notebook;
+  buyOfNotebooks: notebook[] = [];
+  newNotebook: notebook;
   
   constructor() { }
 
   addNotebook (libreta) {
-    console.log("Libreta en service para agregar", libreta)
-    this.buyOfNotebooks = libreta;
-    console.log("Se agrega la Libreta en service ????????????", this.buyOfNotebooks)
-
-  }
+    console.log("Libreta en service de la compra para agregar", libreta)
+    this.buyOfNotebooks.push( libreta);
+}
 
   getBuy () {
     console.log("Libretas compradas", this.buyOfNotebooks)
    return this.buyOfNotebooks;
   }
+  
 }

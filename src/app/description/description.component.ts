@@ -12,6 +12,8 @@ export class DescriptionComponent implements OnInit {
 
   libreta: notebook;
   index: number;
+  addedNotebook: boolean;
+  newNotebook: notebook;
   
   constructor(private aR: ActivatedRoute, private api: ApiService, private buyNotebook: BuyNotebookService) { }
 
@@ -20,27 +22,29 @@ export class DescriptionComponent implements OnInit {
       this.index = params['index'];
     });
     this.libreta =  this.api.getLibretaBolsillo(this.index);
-    console.log("Libreta a describir", this.libreta);
   }
 
   addCar (libreta) {
-    console.log("Libreta a agregar ", libreta)
+    console.log("Libreta a agregar a la compra", libreta)
+    /*
+    this.newNotebook = new notebook(libreta.description, libreta.precio, libreta.typeOfNotebook, libreta.url, libreta.material);
+    this.buyNotebook.addNotebook(this.newNotebook);
+    */
     this.buyNotebook.addNotebook(libreta);
-    
-    
+    this.addedNotebook = true;
     }
 
 }
 
 export class notebook {
-  descripcion: string;
+  description: string;
   precio: number;
   typeOfNotebook: string;
   url: string; 
   material: string;
 
-  constructor ( descripcion: string, precio: number, typeOfNotebook: string, url: string, material: string ) {
-    this.descripcion = descripcion;
+  constructor ( description: string, precio: number, typeOfNotebook: string, url: string, material: string ) {
+    this.description = description;
     this.precio = precio;
     this.typeOfNotebook = typeOfNotebook;
     this.url = url;

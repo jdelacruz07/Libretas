@@ -1,7 +1,9 @@
 <div class="container">
     <p>Resumen de las compras realizadas:</p>
     <div *ngIf="buyOfNotebooks">
-            <span>{{buyOfNotebooks.descripcion}} </span>
-            <span>Precio {{buyOfNotebooks.precio | currency}}</span>
+        <div *ngFor="let notebook of buyOfNotebooks">
+            <span>{{notebook.description}} </span>
+            <span>Precio {{notebook.precio | currency}}</span>
+        </div>
     </div>
 </div>

@@ -1,13 +1,17 @@
 <div class="container">
+   
     <div *ngIf="libreta">
         <img src="{{libreta.url}}" alt="">
         <p>{{libreta.typeOfNotebook}}</p>
         <p>De {{libreta.material}}</p>
-        <p>{{libreta.descripcion}}</p>
+        <p>{{libreta.description}}</p>
         <p>Precio: {{libreta.precio  | currency}}</p>
     </div>
     
-    <button type="submit" (click)="addCar(libreta)">Agregar al carrito</button>
+    <button type="submit" (click)="addCar(libreta)">Comprar</button>
+    <div class="added" *ngIf="addedNotebook">
+        Libreta agregada Correctamente
+    </div>
 </div>
 
 

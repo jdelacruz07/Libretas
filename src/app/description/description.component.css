@@ -6,6 +6,8 @@ img {
 
 button {
     float: right;
+    clear: both;
+    
 }
 
 .container {
@@ -15,6 +17,12 @@ button {
 
 p {
     padding: 10px;
+}
+
+.added {
+    background-color: #cae053;
+    color: #7a08c4;
+    clear: both;
 }
 
 

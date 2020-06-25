@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BuyNotebookService } from '../buy-notebook.service';
-import { notebook } from '../new-libreta/new-libreta.component';
+import { notebook } from '../description/description.component';
+
 
 @Component({
   selector: 'app-shopping-cart',
@@ -8,7 +9,7 @@ import { notebook } from '../new-libreta/new-libreta.component';
   styleUrls: ['./shopping-cart.component.css']
 })
 export class ShoppingCartComponent implements OnInit {
-  buyOfNotebooks: notebook;
+  buyOfNotebooks: notebook[] = [];
 
   constructor(private buyNotebook: BuyNotebookService) { }
 
@@ -17,6 +18,7 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   getBuy () {
+    console.log("retorna la lista de la compra", this.buyNotebook.getBuy());
     this.buyOfNotebooks = this.buyNotebook.getBuy();
   }
   

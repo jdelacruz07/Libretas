@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { ApiService } from '../api.service'
+import { ApiService } from '../api.service';
+import { notebook } from '../description/description.component';
+
 
 
 @Component({
@@ -16,7 +18,7 @@ export class NewLibretaComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = new FormGroup({
-      descripcion: new FormControl(''),
+      description: new FormControl(''),
       precio: new FormControl(''),
       url: new FormControl(''),
       material: new FormControl(''),
@@ -43,18 +45,4 @@ export class NewLibretaComponent implements OnInit {
   }
 }
 
-export class notebook {
-  descripcion: string;
-  precio: number;
-  typeOfNotebook: string;
-  url: string; 
-  material: string;
 
-  constructor ( descripcion: string, precio: number, typeOfNotebook: string, url: string, material: string ) {
-    this.descripcion = descripcion;
-    this.precio = precio;
-    this.typeOfNotebook = typeOfNotebook;
-    this.url = url;
-    this.material = material;
-  }
-}
