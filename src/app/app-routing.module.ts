@@ -31,7 +31,7 @@ const routes: Routes = [
     path: 'new-libreta', component: NewLibretaComponent
   },
   { 
-    path: 'description/:index', component: DescriptionComponent
+    path: 'description/:index/:type', component: DescriptionComponent
   },
   { 
     path: 'shopping-cart', component: ShoppingCartComponent

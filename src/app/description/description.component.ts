@@ -14,14 +14,20 @@ export class DescriptionComponent implements OnInit {
   index: number;
   addedNotebook: boolean;
   newNotebook: notebook;
+  type: any;
   
   constructor(private aR: ActivatedRoute, private api: ApiService, private buyNotebook: BuyNotebookService) { }
 
   ngOnInit(): void {
     this.aR.params.subscribe((params) => {
       this.index = params['index'];
+      this.type = params['type'];
     });
-    this.libreta =  this.api.getLibretaBolsillo(this.index);
+    if (this.type == "bolsillo") {
+      this.libreta =  this.api.getLibretaBolsillo(this.index);
+    } else {
+      this.libreta = this.api.getLibreta(this.index);
+    }
   }
 
   addCar (libreta) {

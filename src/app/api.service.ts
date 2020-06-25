@@ -40,7 +40,7 @@ export class ApiService {
   }
 
   getLibreta(index) {
-    console.log( this.libretaArtesanal[index]);
+    return this.libretaArtesanal[index];
   }
 
   getLibretaBolsillo(index) {
