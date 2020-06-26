@@ -18,5 +18,11 @@ h1 {
     text-align: center;
     color: #9a1f8e;
     background-color: #e7d4ed;
+    margin-top: 15px;
+}
+
+button {
+    float: right;
+    margin-top: 15px;
 }
 
