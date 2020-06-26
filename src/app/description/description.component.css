@@ -25,4 +25,9 @@ p {
     clear: both;
 }
 
+h1 {
+    text-align: center;
+    color: #9a1f8e;
+    background-color: #e7d4ed;
+}
 

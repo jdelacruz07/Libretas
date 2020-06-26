@@ -5,14 +5,15 @@
 h1{
     margin-bottom: 5px;
     text-align: center;
-    background-color: #a4e984;
-    color: #7139b6;
+    background-color: #e7d4ed;
+    color: #9a1f8e;
 }
 
 img {
     width: 350px;
     height: 233px;   
 }
+
 
 .bolsillo-flex {
     margin: auto;
