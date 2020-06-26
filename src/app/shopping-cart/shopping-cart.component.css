@@ -3,3 +3,8 @@
     max-width: 85%;
     clear: both;
 }
+
+.total {
+    text-align: right;
+    float: right;
+}

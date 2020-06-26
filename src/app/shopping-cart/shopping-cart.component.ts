@@ -10,6 +10,7 @@ import { notebook } from '../description/description.component';
 })
 export class ShoppingCartComponent implements OnInit {
   buyOfNotebooks: notebook[] = [];
+  total = 0;
 
   constructor(private buyNotebook: BuyNotebookService) { }
 
@@ -20,6 +21,9 @@ export class ShoppingCartComponent implements OnInit {
   getBuy () {
     console.log("retorna la lista de la compra", this.buyNotebook.getBuy());
     this.buyOfNotebooks = this.buyNotebook.getBuy();
+    for (let iterator of this.buyOfNotebooks) {
+      this.total +=  iterator.precio; 
+    }
   }
   
 
