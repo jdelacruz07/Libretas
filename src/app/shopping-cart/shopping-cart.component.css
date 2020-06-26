@@ -7,11 +7,13 @@
 .total {
     text-align: right;
     float: right;
+    margin-right: 15px;
 }
 
 .subTotal {
     color: #7149b9;
     background-color: #e2f8eb;
+    clear: both;
 }
 
 h1 {
@@ -25,4 +27,18 @@ button {
     float: right;
     margin-top: 15px;
 }
+
+svg {
+    float: right;
+}
+
+p {
+    display: inline-block;
+}
+
+.price {
+    float: right;
+    margin-right: 15px;
+}
+
 
