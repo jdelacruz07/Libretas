@@ -15,6 +15,7 @@ export class DescriptionComponent implements OnInit {
   addedNotebook: boolean;
   newNotebook: notebook;
   type: any;
+  buttonOff: boolean;
   
   constructor(private aR: ActivatedRoute, private api: ApiService, private buyNotebook: BuyNotebookService) { }
 
@@ -38,6 +39,7 @@ export class DescriptionComponent implements OnInit {
     */
     this.buyNotebook.addNotebook(libreta);
     this.addedNotebook = true;
+    this.buttonOff = true;
     }
 
 }

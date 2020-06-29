@@ -11,7 +11,7 @@
     <div class="added" *ngIf="addedNotebook">
         Libreta agregada Correctamente
     </div>
-    <button type="submit" (click)="addCar(libreta)">Comprar</button>
+    <button type="submit" (click)="addCar(libreta)" [disabled]="buttonOff">Comprar</button>
 </div>
 
 
