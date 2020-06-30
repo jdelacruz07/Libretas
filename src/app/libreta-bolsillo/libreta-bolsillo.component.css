@@ -1,6 +1,7 @@
 .container {
     margin: auto;
     max-width: 85%;
+    font-family: 'Julius Sans One', sans-serif;
 }
 h1{
     margin-bottom: 5px;

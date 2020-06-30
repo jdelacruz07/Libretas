@@ -1,6 +1,8 @@
 .container {
     max-width: 85%;  
     margin: auto;
+    font-family: 'Rochester', cursive;
+    font-size: x-large;
 }
 
 h1 {

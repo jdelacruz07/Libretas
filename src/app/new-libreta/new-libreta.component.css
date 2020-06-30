@@ -1,6 +1,7 @@
 .container {
     max-width: 85%;
     margin: auto;
+    font-family: 'Julius Sans One', sans-serif;
 }
 h1 {
     text-align: center;
