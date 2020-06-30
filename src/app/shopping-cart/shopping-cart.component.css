@@ -36,9 +36,14 @@ p {
     display: inline-block;
 }
 
+.list-items {
+    margin-right: 5px;
+}
+
 .price {
     float: right;
-    margin-right: 15px;
+    margin-right: 5px;
 }
+
 
 
