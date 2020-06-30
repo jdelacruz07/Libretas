@@ -19,18 +19,11 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   getBuy () {
-    console.log("retorna la lista de la compra", this.buyNotebook.getBuy());
     this.buyOfNotebooks = this.buyNotebook.getBuy();
     this.getTotalPrice();
-    /*
-    for (let iterator of this.buyOfNotebooks) {
-      this.total +=  iterator.precio; 
-    }
-    */
   }
   
   deleteItem(index) {
-    console.log("Delete Libreta ")
     this.buyNotebook.deleteNotebook(index);
     this.getTotalPrice();
   }

@@ -23,26 +23,22 @@ export class NewLibretaComponent implements OnInit {
       url: new FormControl(''),
       material: new FormControl(''),
       typeOfNotebook: new FormControl(''),
-      
     });
+    
   }
 
   addNotebook(notebook:notebook) {
-    console.log("Formulario Enviado ...", notebook);
     this.newNotebook = notebook;
-    /*this.newNotebook.url = notebook.url.toLocaleUpperCase(); */
-    console.log("Nueva Libreta ...", this.newNotebook);
-    console.log("Nueva Libreta ...", this.newNotebook.url);
-
+    
     if (this.newNotebook.typeOfNotebook == "libreta") {
-      this.api.addLibreta(this.newNotebook);
-      this.form.reset()
-      
+        this.api.addLibreta(this.newNotebook);
+        this.form.reset()
     } else {
-      this.api.addLibretaBolsillo(this.newNotebook);
-      this.form.reset()
-    }
+        this.api.addLibretaBolsillo(this.newNotebook);
+        this.form.reset()
+      }
   }
+
 }
 
 

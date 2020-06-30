@@ -16,8 +16,8 @@ export class LibretaBolsilloComponent implements OnInit {
   ngOnInit(): void {
       this.aR.params.subscribe((params) => {
           this.material = params['material']; 
-          console.log("Este es el tipo de material 1", this.material)
       })
+      
       if (this.material) {
         this.libretas = this.apiService.getLibretasBolsillo(this.material);
       } else {

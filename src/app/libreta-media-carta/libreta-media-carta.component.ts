@@ -16,12 +16,13 @@ export class LibretaMediaCartaComponent implements OnInit {
   ngOnInit(): void {
     this.aR.params.subscribe((params) => {
       this.material = params['material'];
+      
       if (this.material) {
-        this.libretas = this.apiService.getLibretasArtesanal(this.material);
-      } else {
-        this.libretas = this.apiService.getAllLibretasArtesanal();
-      }
-    })
+          this.libretas = this.apiService.getLibretasArtesanal(this.material);
+        } else {
+          this.libretas = this.apiService.getAllLibretasArtesanal();
+          }
+      })
   }
 
 }

@@ -26,7 +26,7 @@ export class DescriptionComponent implements OnInit {
       this.type = params['type'];
     });
     if (this.type == "bolsillo") {
-      this.libreta =  this.api.getLibretaBolsillo(this.index);
+        this.libreta =  this.api.getLibretaBolsillo(this.index);
     } else if(this.type == "bolsilloTela") {
         let typeOfMaterial = this.type;
         this.libretas = this.api.getLibretasBolsillo(typeOfMaterial.substr(8))
@@ -46,14 +46,10 @@ export class DescriptionComponent implements OnInit {
         this.libretas = this.api.getLibretasArtesanal(typeOfMaterial.substr(9))
         this.libreta =  this.libretas[this.index]
     }
+
   }
 
   addCar (libreta) {
-    console.log("Libreta a agregar a la compra", libreta)
-    /*
-    this.newNotebook = new notebook(libreta.description, libreta.precio, libreta.typeOfNotebook, libreta.url, libreta.material);
-    this.buyNotebook.addNotebook(this.newNotebook);
-    */
     this.buyNotebook.addNotebook(libreta);
     this.addedNotebook = true;
     this.buttonOff = true;
