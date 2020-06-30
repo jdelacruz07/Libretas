@@ -3,12 +3,12 @@
     <h1>Libretas</h1>
     <div class="foto-flex"> 
         <figure  *ngFor="let libreta of libretas; let indice = index">
-            <a routerLink="/description/{{indice}}/artesanal">
+            <a routerLink="/description/{{indice}}/artesanal{{material}}">
                 <div *ngIf="material !== undefined; else allFotos">
                     <div *ngIf="libreta.material == material">
                         <img src={{libreta.url}} alt="no toy ????">
                         <figcaption>Libreta de {{libreta.material}} </figcaption>
-                        <figcaption>{{libreta.descripcion}}</figcaption>
+                        <figcaption>{{libreta.description}}</figcaption>
                         <figcaption>{{libreta.precio | currency}}</figcaption>
                     </div>
                 </div>
@@ -17,7 +17,7 @@
                     <div *ngIf="libreta.material">
                         <img src={{libreta.url}} alt="no toy ????">
                         <figcaption>Libreta de {{libreta.material}} </figcaption>
-                        <figcaption>{{libreta.descripcion}} </figcaption>
+                        <figcaption>{{libreta.description}} </figcaption>
                         <figcaption>{{libreta.precio | currency}}</figcaption>
                     </div>
                 </ng-template>

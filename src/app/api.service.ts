@@ -21,7 +21,7 @@ export class ApiService {
     {description: "100% hecha a mano", precio: 230, url:"/assets/IMG_4405.JPG", material: "Papel", typeOfNotebook: "Libreta media carta"}
   ]
 
-  libretaBolsillo = [
+  libretaBolsillo: notebook[] = [
     {description: "100% hecha a mano", precio: 130, url: "/assets/IMG_4319.JPG", material: "Piel", typeOfNotebook: "Libreta de bolsillo"},
     {description: "100% hecha a mano", precio: 120, url: "/assets/IMG_4326.JPG", material: "Tela", typeOfNotebook: "Libreta de bolsillo"},
     {description: "100% hecha a mano", precio: 110, url: "/assets/IMG_4327.JPG", material: "Papel", typeOfNotebook: "Libreta de bolsillo"}
@@ -31,12 +31,10 @@ export class ApiService {
 
   addLibreta (libreta) {
     this.libretaArtesanal.push(libreta);
-    console.log("Se agrega: ", libreta);
   }
 
   addLibretaBolsillo (libreta) {
     this.libretaBolsillo.push(libreta);
-    console.log("Se agrega: ", libreta);
   }
 
   getLibreta(index) {
@@ -44,10 +42,7 @@ export class ApiService {
   }
 
   getLibretaBolsillo(index) {
-    console.log("el tipo del indice en servicios es: ",typeof(index))
-    console.log( this.libretaBolsillo[index]);
     return this.libretaBolsillo[index];
-
   } 
 
   getAllLibretasArtesanal(){

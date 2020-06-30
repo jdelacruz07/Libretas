@@ -2,7 +2,7 @@
     <h1>Libretas de bolsillo</h1>
     <div class="bolsillo-flex"  >
         <figure *ngFor="let libreta of libretas; let indice = index">
-            <a routerLink="/description/{{indice}}/bolsillo">
+            <a routerLink="/description/{{indice}}/bolsillo{{material}}">
                 <div *ngIf="material !== undefined; else allFotos">
                     <div *ngIf="libreta.material == material">
                         <img  src="{{libreta.url}}" alt="no toy ????" >    

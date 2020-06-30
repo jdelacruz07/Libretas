@@ -16,6 +16,7 @@ export class DescriptionComponent implements OnInit {
   newNotebook: notebook;
   type: any;
   buttonOff: boolean;
+  libretas: notebook[] = [];
   
   constructor(private aR: ActivatedRoute, private api: ApiService, private buyNotebook: BuyNotebookService) { }
 
@@ -26,8 +27,24 @@ export class DescriptionComponent implements OnInit {
     });
     if (this.type == "bolsillo") {
       this.libreta =  this.api.getLibretaBolsillo(this.index);
+    } else if(this.type == "bolsilloTela") {
+        let typeOfMaterial = this.type;
+        this.libretas = this.api.getLibretasBolsillo(typeOfMaterial.substr(8))
+        this.libreta =  this.libretas[this.index]
+    } else if (this.type =="bolsilloPapel") {
+        let typeOfMaterial = this.type;
+        this.libretas = this.api.getLibretasBolsillo(typeOfMaterial.substr(8))
+        this.libreta =  this.libretas[this.index]
+    } else if (this.type == "artesanal") {
+        this.libreta =  this.api.getLibreta(this.index);
+    } else if (this.type == "artesanalTela") {
+        let typeOfMaterial = this.type;
+        this.libretas = this.api.getLibretasArtesanal(typeOfMaterial.substr(9))
+        this.libreta =  this.libretas[this.index]
     } else {
-      this.libreta = this.api.getLibreta(this.index);
+        let typeOfMaterial = this.type;
+        this.libretas = this.api.getLibretasArtesanal(typeOfMaterial.substr(9))
+        this.libreta =  this.libretas[this.index]
     }
   }
 
