@@ -1,7 +1,7 @@
 <div class="container">
     <h1>Resumen de las compras realizadas:</h1>
     <div *ngIf="buyOfNotebooks">
-        <div [@myAnimation]="animationState" *ngFor="let notebook of buyOfNotebooks; let i = index">
+        <div [@shoppingAnimation]="animationState" *ngFor="let notebook of buyOfNotebooks; let i = index">
             <p class="list-items">{{i + 1}})</p>
             <p>{{notebook.description}} </p>
             <svg (click)="deleteItem(i)"  class="bi bi-x-square" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

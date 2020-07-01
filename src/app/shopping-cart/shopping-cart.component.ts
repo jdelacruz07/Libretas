@@ -9,19 +9,18 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   templateUrl: './shopping-cart.component.html',
   styleUrls: ['./shopping-cart.component.css'],
   animations: [
-    trigger('myAnimation', [
-      state('inactive', style({
+    trigger('shoppingAnimation', [
+      state('active', style({
+        opacity: '1',
         backgroundColor: '#eee'
       })),
-      state('active', style({
-        backgroundColor: '#ffcc00'
-      })),
 
-      transition('* <=> void', [
-        style({
-          transform: 'translateX(80px)'
-        }),
-        animate('500ms ease-in')
+      transition('void => *', [
+        style({transform: 'translateX(-30px)', opacity: '0'}),
+        animate('700ms ease-in-out')
+      ]),
+      transition('* => void', [
+        animate('300ms ease-in-out', style({transform: 'translateX(-30px)', opacity: '0'}))
       ]),
     ])
   ]
@@ -30,7 +29,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 export class ShoppingCartComponent implements OnInit {
   buyOfNotebooks: notebook[] = [];
   total: number = 0;
-  animationState = 'inactive';
+  animationState = 'active';
 
   constructor(private buyNotebook: BuyNotebookService) { }
 
@@ -46,7 +45,7 @@ export class ShoppingCartComponent implements OnInit {
   deleteItem(index) {
     this.buyNotebook.deleteNotebook(index);
     this.getTotalPrice();
-    this.animationState = (this.animationState === 'inactive' ? 'active' : 'inactive');
+    /*this.animationState = (this.animationState === 'inactive' ? 'active' : 'inactive');*/
   }
 
   getTotalPrice () {
